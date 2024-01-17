@@ -8,8 +8,6 @@ Option Explicit On
 Option Strict On
 
 Module Module1
-    Private Const V As Integer = 2
-    Private Const V1 As Integer = 1
 
     Sub Main()
 
@@ -27,14 +25,19 @@ Module Module1
 
         Console.WriteLine("Would you like the SUM or PRODUCT of these two numbers?" & vbNewLine _
                           & "1. SUM" & vbNewLine _
-                          & "2. PRODUCT")
+                          & "2. PRODUCT") 'prompts the user to choose whether or not they want to ADD/MULTIPLY
 
-        Operation = CInt(Console.ReadLine())
+        Operation = CInt(Console.ReadLine()) 'takes user input
 
-        If Operation <> V1 Then Else Console.WriteLine(Answer = Number1 + Number2)
+        If Operation = CInt("1") Then
+            Answer = Number1 + Number2
 
-        If Operation = V Then Console.WriteLine(Answer = Number1 * Number2)
+        ElseIf Operation = CInt("2") Then
+            Answer = Number1 * Number2
 
+        End If
+
+        Console.WriteLine("The Answer is " & Answer & ".")
         Console.Read()
 
     End Sub
