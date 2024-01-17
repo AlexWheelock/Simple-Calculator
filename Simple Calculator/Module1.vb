@@ -16,6 +16,7 @@ Module Module1
         Dim Number2 As Integer
         Dim Operation As Integer
         Dim Answer As Integer
+        Dim addMult As String
 
         Console.WriteLine("Please Enter A Number.") 'prompts the user to define Number1 variable
         Number1 = CInt(Console.ReadLine()) 'takes user input
@@ -23,21 +24,24 @@ Module Module1
         Console.WriteLine("Please Enter Another Number.") 'prompts the user to define Number2 variable
         Number2 = CInt(Console.ReadLine()) 'takes user input
 
-        Console.WriteLine("Would you like the SUM or PRODUCT of these two numbers?" & vbNewLine _
-                          & "1. SUM" & vbNewLine _
-                          & "2. PRODUCT") 'prompts the user to choose whether or not they want to ADD/MULTIPLY
+        Console.WriteLine("Would you like the ADD or MULTIPLY?" & vbNewLine _
+                          & "1. ADD" & vbNewLine _
+                          & "2. MULTIPLY") 'prompts the user to choose whether or not they want to ADD/MULTIPLY
 
         Operation = CInt(Console.ReadLine()) 'takes user input
 
         If Operation = CInt("1") Then
-            Answer = Number1 + Number2
+            Answer = Number1 + Number2 '
+            addMult = "+"
 
         ElseIf Operation = CInt("2") Then
             Answer = Number1 * Number2
+            addMult = "*"
 
         End If
 
-        Console.WriteLine("The Answer is " & Answer & ".")
+        Console.WriteLine(CStr(Number1) & " + " & CStr(Number2) & " = " & CStr(Answer) & vbNewLine _
+                          & "The Answer is " & Answer & ".")
         Console.Read()
 
     End Sub
