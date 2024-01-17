@@ -16,27 +16,48 @@ Module Module1
         Dim Number2 As Integer
         Dim Operation As Integer
         Dim Answer As Integer
-        Dim addMult As String
+        Dim funct As String
 
-        Console.WriteLine("Please Enter A Number.") 'prompts the user to define Number1 variable
+        Console.WriteLine("Please Enter Two Numbers. Enter " & "Q " & "at any time to quit") 'prompts the user to define Number1 variable
+
+
+
         Number1 = CInt(Console.ReadLine()) 'takes user input
+
+        'If Number1 = ("Q") Then
+
+        'ElseIf Number1 <> Int32 Then
+
+        'Else
+
+        'End If
 
         Console.WriteLine("Please Enter Another Number.") 'prompts the user to define Number2 variable
         Number2 = CInt(Console.ReadLine()) 'takes user input
 
-        Console.WriteLine("Would you like the ADD or MULTIPLY?" & vbNewLine _
-                          & "1. ADD" & vbNewLine _
-                          & "2. MULTIPLY") 'prompts the user to choose whether or not they want to ADD/MULTIPLY
+        Console.WriteLine("Choose one of the following options:" & vbNewLine _
+                          & "1. Add" & vbNewLine _
+                          & "2. Subtract" & vbNewLine _
+                          & "3. Multiply" & vbNewLine _
+                          & "4. Divide")
 
         Operation = CInt(Console.ReadLine()) 'takes user input
 
         If Operation = CInt("1") Then
             Answer = Number1 + Number2 '
-            addMult = "+"
+            funct = "+"
 
         ElseIf Operation = CInt("2") Then
+            Answer = Number1 - Number2
+            funct = "-"
+
+        ElseIf Operation = CInt("3") Then
             Answer = Number1 * Number2
-            addMult = "*"
+            funct = "*"
+
+        ElseIf Operation = CInt("4") Then
+            Answer = Number1 \ Number2
+            funct = "/"
 
         End If
 
