@@ -8,6 +8,8 @@ Option Explicit On
 Option Strict On
 
 Module Module1
+    Private Const V As Integer = 2
+    Private Const V1 As Integer = 1
 
     Sub Main()
 
@@ -15,6 +17,7 @@ Module Module1
         Dim Number1 As Integer
         Dim Number2 As Integer
         Dim Operation As Integer
+        Dim Answer As Integer
 
         Console.WriteLine("Please Enter A Number.") 'prompts the user to define Number1 variable
         Number1 = CInt(Console.ReadLine()) 'takes user input
@@ -25,18 +28,12 @@ Module Module1
         Console.WriteLine("Would you like the SUM or PRODUCT of these two numbers?" & vbNewLine _
                           & "1. SUM" & vbNewLine _
                           & "2. PRODUCT")
+
         Operation = CInt(Console.ReadLine())
 
-        If Operation = CInt("1") Then (Number1 + Number2)
-            Console.WriteLine("Number1 + Number2")
+        If Operation <> V1 Then Else Console.WriteLine(Answer = Number1 + Number2)
 
-        ElseIf Operation = CInt("2") Then (Number1 * Number2)
-        
-        Else
-
-        End If
-
-
+        If Operation = V Then Console.WriteLine(Answer = Number1 * Number2)
 
         Console.Read()
 
