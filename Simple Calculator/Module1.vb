@@ -18,7 +18,7 @@ Module Module1
         Dim Answer As Integer
         Dim funct As String
 
-        Console.WriteLine("Please Enter Two Numbers. Enter " & "Q " & "at any time to quit") 'prompts the user to define Number1 variable
+        Console.WriteLine("Please Enter Two Numbers. Enter " & Chr(34) & "Q" & Chr(34) & " at any time to quit")
 
 
 
