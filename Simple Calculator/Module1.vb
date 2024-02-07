@@ -31,7 +31,7 @@ Module Module1
         Operation = CInt(Console.ReadLine()) 'takes user input
 
         If Operation = CInt("1") Then
-            Answer = Number1 + Number2 '
+            Answer = Number1 + Number2
             addMult = "+"
 
         ElseIf Operation = CInt("2") Then
@@ -40,7 +40,7 @@ Module Module1
 
         End If
 
-        Console.WriteLine(CStr(Number1) & " + " & CStr(Number2) & " = " & CStr(Answer) & vbNewLine _
+        Console.WriteLine(CStr(Number1) & " " & CStr(addMult) & " " & CStr(Number2) & " = " & CStr(Answer) & vbNewLine _
                           & "The Answer is " & Answer & ".")
         Console.Read()
 
